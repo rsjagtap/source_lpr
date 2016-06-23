@@ -47,8 +47,8 @@ int main(int argc, char* argv[]){
 	Rect crop;	//To create resize the grabbed faces and store the result  in this variable.
 	int CarCount = 0;
 	char imageToSave[50];	
-	string folderName = "Cars_Plates";
-	string folderRemoveCommand = "rm -rf" + folderName;
+	string folderName = "../Cars_Plates";
+	string folderRemoveCommand = "rm -rf " + folderName;
 	system(folderRemoveCommand.c_str());	//Remove the folder if already present
 	string folderCreateCommand = "mkdir " + folderName;
 	system(folderCreateCommand.c_str());	//Create the folder if not present.
@@ -104,10 +104,10 @@ cout<<"height "<< src_img.size().height << endl;
 //                else if((cars[i].width + 75) <= src_img.size().width)
 //                        cars[i].width +=75;
 		if((cars[i].width + 65) <= src_img.size().width- 20)
-                	cars[i].width +=65;
+                	cars[i].width += 45;
 		else if((cars[i].width + 55) <= src_img.size().width-20)
-			cars[i].width +=55;
-                else if((cars[i].width + 45) <= src_img.size().width-20)
+			cars[i].width += 45;
+             else if((cars[i].width + 45) <= src_img.size().width-20)
                         cars[i].width +=45;
                 else if((cars[i].width + 35) <= src_img.size().width-20)
                         cars[i].width +=35;
@@ -117,13 +117,13 @@ cout<<"height "<< src_img.size().height << endl;
                         cars[i].width +=15;
 
 
-		if((cars[i].height + 20) <= src_img.size().height)
-			cars[i].height +=20;
-                else if((cars[i].height + 15) <= src_img.size().height)
-                        cars[i].height +=15;
-                else if((cars[i].height + 10) <= src_img.size().height)
-                        cars[i].height +=10;
-                else if((cars[i].height + 5) <= src_img.size().height)
+//		if((cars[i].height + 20) <= src_img.size().height)
+//			cars[i].height +=20;
+//             else if((cars[i].height + 15) <= src_img.size().height)
+//                        cars[i].height +=15;
+//               if((cars[i].height + 10) <= src_img.size().height)
+//                        cars[i].height +=10;
+                if((cars[i].height + 5) <= src_img.size().height)
                         cars[i].height += 5;
 
 
